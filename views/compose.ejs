@@ -1,0 +1,25 @@
+<%- include("partials/header") %>
+<h1>Compose </h1>
+
+<!-- inputs ko ek form mein daal ke we can send the values that user typed to app.js file-->
+<!-- basically form se we can see and access the typed values-->
+<form method="POST" action="/compose"> 
+   
+    <div class="form-group">
+    <label>Title</label>
+    <input type="text" class="form-control" name="postTitle" >
+    
+  </div>
+  <div class="form-group">
+    <label>Post</label>
+
+ <textarea name="postBody" cols="30" rows="5" class="form-control">
+</textarea>
+  </div>
+  
+  <button type="submit" class="btn btn-primary" name="button">Publish</button>
+</form> 
+
+<!-- Once we submit the form it makes a post request in app.js to '/compose'-->
+
+<%- include("partials/footer") %>
